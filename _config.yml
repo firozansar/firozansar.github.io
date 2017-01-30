@@ -2,7 +2,7 @@
 title: Lorem Ipsum - Web Developer
 description: "A blog about lorem ipsum ..."
 baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
-url: "" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+url: "https:firozansar.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
 # User settings
 username: Firoz Ansari
 user_title: Firoz Ansari - Mobile Dev
@@ -39,11 +39,10 @@ links:
     url: /about
 # projects in header index
 projects:
-  - name: asciilang
-    url: https://github.com/victorvoid/asciilang
-  - name: vim-frontend
-    url: https://github.com/victorvoid/vim-frontend
-  - name: generator-capybara
-    url: https://github.com/victorvoid/generator-capybara 
+  - name: Android NDK experiments
+    url: https://github.com/firozansar/NDKExperments
+  - name: IOS weather app written in Swift
+    url: https://github.com/firozansar/WeatherApp
+  
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
