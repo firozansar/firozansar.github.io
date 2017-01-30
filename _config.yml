@@ -5,7 +5,7 @@ baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
 url: "" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
 # User settings
 username: Firoz Ansari
-user_title: Firoz Ansari - Mobile Dev
+user_title: Firoz Ansari - Mobile Developer
 email: firozansar@gmail.com
 twitter_username: firozansar
 github_username:  firozansar
