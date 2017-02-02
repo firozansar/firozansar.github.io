@@ -1,6 +1,6 @@
 # My blog website
 
-It's under construction. Fully responsive, works well on mobile devices as well.
+It's under construction. Fully responsive. Works well on mobile devices as well.
 
 It's live [here](https://firozansar.github.io/).
 
