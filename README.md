@@ -1,6 +1,6 @@
 # My blog website
 
-It's under construction. Fully responsive, works well on mobile devices as well.
+Blog articles are just for demo purpose only. Real articles will appear soon.
 
 It's live [here](https://firozansar.github.io/).
 
