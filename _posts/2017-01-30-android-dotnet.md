@@ -11,7 +11,7 @@ categories:
 serie: learn
 ---
 
-<img src="/assets/img/blog/androiddotnet.jpeg" alt="">
+<img src="/assets/img/general/androiddotnet.jpeg" alt="">
 
 I have been working with both .Net and Android for about 5 years now. I was asked quite a few times: which platform easier to develop - Android or .Net?
 
