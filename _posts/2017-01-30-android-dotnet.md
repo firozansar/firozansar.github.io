@@ -11,8 +11,6 @@ categories:
 serie: learn
 ---
 
-# Is Android development harder than .Net development
-
 I have been working with both .Net and Android for about 5 years now. I was asked quite a few times: which platform easier to develop - Android or .Net?
 
 It was Android which got me first interested in programming. When I got my first smartphone, I wondered how much time it takes to build a simple app like a calculator. After some research, I made my plan to learn Android and Java. Eventually I made my 'Hello World' app which gave me enough confidence to apply for a Computer Science course to deepen my knowledge in programming.
