@@ -5,10 +5,10 @@ image: ''
 date:   2017-01-30 00:06:31
 tags:
 - Android .Net
-description: ''
+description: 'Android'
 categories:
 - Android
-serie: learn
+series: learn
 ---
 
 <img src="/assets/img/general/androiddotnet.jpeg" alt="">
