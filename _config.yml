@@ -1,6 +1,6 @@
 # Site settings
 title: Firoz Ansari
-description: "My blog.."
+description: "My blog"
 baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
 url: "" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
 # User settings
