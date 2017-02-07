@@ -1,13 +1,12 @@
 {
-  "name": "victorigortemplate",
-  "version": "1.0.0",
-  "description": "My jekyll blog template.",
+  "name": "firozansar.github.io",
+  "version": "1.0.1",
+  "description": "My jekyll blog.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "test"
   },
   "keywords": [
-    "frontend",
     "blog",
     "css",
     "stylus",
@@ -15,8 +14,8 @@
     "jekyll",
     "js"
   ],
-  "author": "Victor Igor",
-  "license": "ISC",
+  "author": "Firoz Ansari",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer-stylus": "^0.4.0",
     "browser-sync": "^1.9.0",

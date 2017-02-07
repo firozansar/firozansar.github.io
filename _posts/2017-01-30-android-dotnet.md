@@ -1,3 +1,16 @@
+---
+layout: post
+title:  "Is Android development harder than .Net development"
+image: ''
+date:   2017-01-30 00:06:31
+tags:
+- Android .Net
+description: ''
+categories:
+- Android
+serie: learn
+---
+
 # Is Android development harder than .Net development
 
 I have been working with both .Net and Android for about 5 years now. I was asked quite a few times: which platform easier to develop - Android or .Net?
