@@ -41,7 +41,7 @@ links:
 projects:
   - name: My twitter bot
     url: https://github.com/firozansar/firozansar-twitter-bot
-  - name: General Android examples including notification, local broadcast, download manager, services etc.
+  - name: General Android examples
     url: https://github.com/firozansar/NotificationBroadcastExample
   - name: Android NDK experiments
     url: https://github.com/firozansar/NDKExperments
