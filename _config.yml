@@ -1,8 +1,8 @@
 # Site settings
 title: Firoz Ansari
 description: "My blog"
-baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
-url: "" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+baseurl: "" 
+url: ""
 # User settings
 username: Firoz Ansari
 user_title: Firoz Ansari - Mobile Developer
@@ -49,6 +49,6 @@ projects:
     url: https://github.com/firozansar/NodeJsExample
   - name: IOS weather app written in Swift
     url: https://github.com/firozansar/WeatherApp
-  
+
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
