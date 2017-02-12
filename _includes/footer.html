@@ -1,17 +1,6 @@
 <footer>
 
 	<!--<p>Made with <span id="heart">💚</span></p> -->
-	
-	<div id="feed"></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="//api.devlead.se/api/BlogPosts?code=cAr9QGEzYYiWYYJbD9i0JG9kCiqGHWIXLebju8kZMxG119FkJNxFWw=="></script>
-    <script>
-        document.getElementById("feed").innerHTML = Mustache.render('\
-          <h3>{{title}}</h3>\
-          {{#items}}\
-            <a href="{{link}}">{{pubDate}}&nbsp;-&nbsp;{{title}}</a><br />\
-          {{/items}}',
-          feed);
-    </script>
+
 
 </footer>
