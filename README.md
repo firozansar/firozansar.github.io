@@ -1,8 +1,8 @@
 # My blog website
 
-Blog articles are just for demo purpose only. Real articles will appear soon.
+Code repository for my personal website.
 
-It's live [here](https://firozansar.github.io/).
+It's live [here](https://firozansari.info/).
 
 
 ## License
