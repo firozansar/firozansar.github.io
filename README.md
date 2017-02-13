@@ -2,7 +2,7 @@
 
 Code repository for my personal website.
 
-It's live [here](https://firozansari.info/).
+It's live [here](http://www.firozansari.info/).
 
 
 ## License
