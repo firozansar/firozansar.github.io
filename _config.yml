@@ -1,7 +1,7 @@
 # Site settings
 title: Firoz Ansari
 description: "My blog"
-baseurl: "" 
+baseurl: ""
 url: ""
 # User settings
 username: Firoz Ansari
@@ -43,8 +43,8 @@ projects:
     url: https://github.com/firozansar/firozansar-twitter-bot
   - name: General Android examples
     url: https://github.com/firozansar/NotificationBroadcastExample
-  - name: Android NDK experiments
-    url: https://github.com/firozansar/NDKExperments
+  - name: Android Animated Vector Drawables examples
+    url: https://github.com/firozansar/animated-vector-drawable-examples
   - name: A simple image uploader in NodeJS
     url: https://github.com/firozansar/NodeJsExample
   - name: IOS weather app written in Swift
