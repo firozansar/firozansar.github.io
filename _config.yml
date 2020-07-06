@@ -5,7 +5,7 @@ baseurl: ""
 url: ""
 # User settings
 username: Firoz Ansari
-user_title: Firoz Ansari - Mobile Developer
+user_title: Firoz Ansari - Android Tech Lead
 email: firozansar@gmail.com
 twitter_username: firozansar
 github_username:  firozansar
@@ -39,14 +39,14 @@ links:
     url: /about
 # projects in header index
 projects:
-  - name: My twitter bot
-    url: https://github.com/firozansar/firozansar-twitter-bot
-  - name: Android espresso test examples
-    url: https://github.com/firozansar/EspressoExamples
+  - name: MovieMVP (Android/Kotlin/MVP)
+    url: https://github.com/firozansar/MovieMvp
+  - name: RxWeatherApp (Android/Kotlin/MVVM)
+    url: https://github.com/firozansar/RxWeatherApp
   - name: Android Animated Vector Drawables examples
     url: https://github.com/firozansar/animated-vector-drawable-examples
-  - name: A simple image uploader in NodeJS
-    url: https://github.com/firozansar/NodeJsExample
+  - name: Android espresso test examples
+    url: https://github.com/firozansar/EspressoExamples
   - name: IOS weather app written in Swift
     url: https://github.com/firozansar/WeatherApp
 
