@@ -2,3 +2,12 @@ _site
 .sass-cache
 node_modules
 _drafts
+.jekyll-cache
+.jekyll-metadata
+vendor
+.DS_Store
+_posts/.DS_Store
+assets/.DS_Store
+assets/img/.DS_Store
+src/.DS_Store
+src/img/.DS_Store
