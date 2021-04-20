@@ -6,7 +6,7 @@ body {
   background-color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid #0000FF;
+  border-top: 3px solid #428bca;
 }
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -96,10 +96,10 @@ body {
   margin: 20px 0;
 }
 .container a {
-  color: #0000FF;
+  color: #428bca;
 }
 .container a:hover {
-  color: #0000FF;
+  color: #428bca;
 }
 .img-responsive {
  display: block;
@@ -120,10 +120,10 @@ body {
   font-size: 15px;
 }
 .panel-default h4 a, h5 a {
-  color: #0000FF;
+  color: #428bca;
 }
 .panel-default h4 a:hover, h5 a:hover {
-  color: #0000FF;
+  color: #428bca;
 }
 .panel{
   border-style: none;
@@ -174,7 +174,7 @@ body {
 	color: #6b6b6b;
 }
 div.footer{
-  border-bottom: 5px solid #0000FF;
+  border-bottom: 5px solid #428bca;
 }
 /* Set the fixed height of the footer here */
 /*.footer {
@@ -183,42 +183,4 @@ div.footer{
   
 }*/
 
-/* CV 
--------------------------------------------------- */
 
-.me {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  margin-bottom: 20px;
-}
-
-header > h1, section > h1 {
-  color: #0000FF;
-}
-
-header > h1 {
-  line-height: 100%;
-  font-size: 250%;
-  margin-bottom: 20px;
-}
-
-.container > header p, .container > header address {
-  margin-bottom: 20px;
-}
-
-.container > header p:last-child {
-  margin-bottom: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-section > h1 {
-  font-size: 140%;
-  line-height: 120%;
-  text-transform: uppercase;
-}
