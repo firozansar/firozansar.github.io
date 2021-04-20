@@ -5,7 +5,7 @@ baseurl: ""
 url: ""
 # User settings
 username: Firoz Ansari
-user_title: Firoz Ansari - Android Tech Lead
+user_title: Firoz Ansari
 email: firozansar@gmail.com
 twitter_username: firozansar
 github_username:  firozansar
@@ -39,16 +39,16 @@ links:
     url: /about
 # projects in header index
 projects:
+  - name: RedditReader(Android/Kotlin/MVVM)
+    url: https://github.com/firozansar/RedditReader
   - name: MovieMVP (Android/Kotlin/MVP)
     url: https://github.com/firozansar/MovieMvp
   - name: RxWeatherApp (Android/Kotlin/MVVM)
-    url: https://github.com/firozansar/RxWeatherApp
-  - name: Android Animated Vector Drawables examples
-    url: https://github.com/firozansar/animated-vector-drawable-examples
-  - name: Android espresso test examples
-    url: https://github.com/firozansar/EspressoExamples
-  - name: IOS weather app written in Swift
-    url: https://github.com/firozansar/WeatherApp
+    url: https://github.com/firozansar/RxWeatherApp  
+  - name: Architecture Component Sample (Android/Kotlin/MVVM)
+    url: https://github.com/firozansar/Architecture-Component-Sample
+  - name: Coding exercise covering Android, Kotlin, MVVM, unit testing, UI testing
+    url: https://github.com/firozansar/CodingExercise
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
