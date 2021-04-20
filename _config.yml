@@ -1,29 +1,31 @@
 # Site settings
 title: Firoz Ansari
-description: "My blog"
+description: "My blog and CV"
 baseurl: ""
 url: ""
 # User settings
-username: Firoz Ansari
-user_title: Firoz Ansari
+author: Firoz Ansari
+description: Personal blog and cv
+avatar: profile.png
 email: firozansar@gmail.com
-twitter_username: firozansar
-github_username:  firozansar
-gplus_username:  FirozAnsari
-disqus_username: firozansar
+github: firozansar
+twitter: firozansar
+linkedin: firozansar
+stackoverflow: users/1934633/firoz-ansari
+# disqus: firozansar
+google_analytics: UA-69391421-1
 
 # Build settings
-markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+markdown: kramdown
+rdiscount:
+  extensions: [smart]
+permalink: /:title.html
+paginate: 5
+plugins: [jekyll-paginate]
+port: 3000
+safe: true
 
-
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
 
 # Links to include in menu navigation
 links:
@@ -50,5 +52,3 @@ projects:
   - name: Coding exercise covering Android, Kotlin, MVVM, unit testing, UI testing
     url: https://github.com/firozansar/CodingExercise
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
