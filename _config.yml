@@ -1,13 +1,12 @@
 # Site settings
 title: Firoz Ansari
-description: "My blog and CV"
 baseurl: ""
 url: ""
 # User settings
 author: Firoz Ansari
 description: Personal blog and cv
 avatar: profile.png
-email: firozansar@gmail.com
+email: firozansar@outlook.com
 github: firozansar
 twitter: firozansar
 linkedin: firozansar
