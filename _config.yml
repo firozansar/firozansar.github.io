@@ -4,7 +4,7 @@ baseurl: ""
 url: ""
 # User settings
 author: Firoz Ansari
-description: Personal blog and cv
+description: Personal Website
 avatar: profile.png
 email: firozansar@outlook.com
 github: firozansar
@@ -12,7 +12,7 @@ twitter: firozansar
 linkedin: firozansar
 stackoverflow: users/1934633/firoz-ansari
 # disqus: firozansar
-google_analytics: UA-69391421-1
+google_analytics: UA-91831454-1
 
 # Build settings
 highlighter: rouge
