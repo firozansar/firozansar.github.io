@@ -1,7 +1,7 @@
 # Site settings
 title: Firoz Ansari
 baseurl: ""
-url: ""
+url: "https://www.firozansari.info"
 # User settings
 author: Firoz Ansari
 description: Personal Website
@@ -19,37 +19,17 @@ google_analytics: AW-981728270
 # Build settings
 highlighter: rouge
 markdown: kramdown
-rdiscount:
-  extensions: [smart]
 permalink: /:title.html
 paginate: 5
 plugins: [jekyll-paginate]
 port: 3000
 safe: true
 
-
-# Links to include in menu navigation
-links:
-  - title: home
-    url: /
-  - title: my posts
-    url: /posts
-  - title: series
-    url: /series
-  - title: tags
-    url: /tags
-  - title: about me
-    url: /about
-# projects in header index
-projects:
-  - name: RedditReader(Android/Kotlin/MVVM)
-    url: https://github.com/firozansar/RedditReader
-  - name: MovieMVP (Android/Kotlin/MVP)
-    url: https://github.com/firozansar/MovieMvp
-  - name: RxWeatherApp (Android/Kotlin/MVVM)
-    url: https://github.com/firozansar/RxWeatherApp  
-  - name: Architecture Component Sample (Android/Kotlin/MVVM)
-    url: https://github.com/firozansar/Architecture-Component-Sample
-  - name: Coding exercise covering Android, Kotlin, MVVM, unit testing, UI testing
-    url: https://github.com/firozansar/CodingExercise
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - vendor
+  - .DS_Store
 

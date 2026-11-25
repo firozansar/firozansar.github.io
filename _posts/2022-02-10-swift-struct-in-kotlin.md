@@ -4,10 +4,11 @@ title:  "Swift Struct equivalent in Kotlin"
 image: ''
 date:   2022-02-10 00:06:31
 tags:
-- Swift, Kotlin
+- Swift
+- Kotlin
 description: 'Android'
 categories:
-- Koltlin
+- Kotlin
 series: learn
 ---
 
@@ -17,7 +18,7 @@ series: learn
 Until recently I have used data class in Kotlin whenever I need to convert a Swift struct into a Kotlin equivalent in Android project. It works fine but it is not a perfect solution. Both struct and data class are simplified versions of a class. Data class is still a class. It is a reference type. On the other hand, struct is a value type. 
 
 Let’s have a look at some examples. First an example of Swift struct:
-```
+```swift
 struct Person {
    let name: String
    var age: Int
@@ -35,7 +36,7 @@ print(person2.age) // Prints 30
 The results are different because copying a struct creates an independent instance with its own unique copy of its data. 
 
 Before using Data class, let’s have a look what if we use class instead. 
-```
+```kotlin
 class Person(name: String) {
     var age: Int? = null
 }
@@ -51,7 +52,7 @@ println("Person2 age: ${person2.age?.toString()}") // Person2 age: 30
 Both Person1 and Person2 now displaying same age! This is happening because when you assign in Kotlin, you are copying a reference, not a class. The variable person2 here pointing to the exact same object that person1 is pointing to.
 
 What about Data class? 
-```
+```kotlin
 data class Person(var name: String, var age: Int)
 
 val person1 = Person("Alex", 20)
@@ -66,6 +67,3 @@ Data class is indeed displaying the expected result! We use data class to create
 But there is a downside of using data class. Instantiating a data class is expensive. Primitive values can be written to the stack which is fast and efficient. Instances of data classes are written to the heap.
 
 Are there any other options? There is another option which is Inline class (available since Kotlin 1.3). It was introduced to overcome the shortcomings of traditional wrappers around some types. Inline class add the goodness of Type Aliases with the value range of the primitive data types which improve performance. This happens because the data is inlined into its usages, and object instantiation is skipped in the resulting compiled code. But inline class is limited to one parameter in its constructor at the moment. So, we have no choice but to use data class to wrap multiple parameters for the time being.
-
-
-![bye](/assets/img/gifs/bye.gif)

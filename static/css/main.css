@@ -1,4 +1,4 @@
-/* Main page with stikky-footer
+/* Main page with sticky-footer
 -------------------------------------------------- */
 html,
 body {
@@ -129,18 +129,36 @@ body {
   border-style: none;
 }
 .panel-body {
-  padding-top: -10px;
+  padding-top: 0;
   text-align: left;
 }
 .social {
   padding-top: 12px;
   word-spacing: 25px;
 }
-.social h4 > a {
-  color: #000000;
+.social h2 > a {
+  color: #428bca;
+}
+.social h2 > a:hover {
+  color: #2a6496;
 }
 .avatar {
   padding-top: 5%;
+}
+.avatar img {
+  max-width: 100%;
+  height: auto;
+}
+.about-bio {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
+}
+.cv-description {
+  text-align: left;
+  line-height: 30px;
+  font-size: 18px;
 }
 .blog-post{
   padding-top: 15px;

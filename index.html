@@ -5,22 +5,21 @@ layout: home
 <section id="about">
 	<div class="container">
 	  <div class="avatar">
-		<img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Firoz Ansari">
+		<img class="img-circle" src="{{ '/static/img/' | append: site.avatar | relative_url }}" alt="{{ site.author }}">
 	  </div>
 	  {% include social.html %}
-	  <h3>
-		<p>Welcome to my digital domain! I'm <strong>{{ site.author }}</strong>. a seasoned Android developer with a decade of journeying through the ever-evolving landscape of mobile application development. Over the years, I've transformed initial concepts into dynamic, user-friendly applications that have reached millions of users worldwide. My adventure began in the early days of Android, navigating through its initial complexities, and has evolved alongside its exponential growth and the introduction of cutting-edge technologies.</p> 
+	  <div class="about-bio">
+		<p>Welcome to my digital domain! I'm <strong>{{ site.author }}</strong>, a seasoned Android developer with a decade of journeying through the ever-evolving landscape of mobile application development. Over the years, I've transformed initial concepts into dynamic, user-friendly applications that have reached millions of users worldwide. My adventure began in the early days of Android, navigating through its initial complexities, and has evolved alongside its exponential growth and the introduction of cutting-edge technologies.</p>
 
-		<p>My expertise spans from mastering the fundamentals of Android development to harnessing the power of the latest frameworks and tools like Kotlin, Jetpack, and Firebase. I have a penchant for crafting applications that not only excel in functionality but also provide captivating user experiences. This journey has not only been about developing apps but also about continuously learning, adapting, and contributing to the community.
-		</p> 
-		
-		<p>Through this website, I aim to share insights from my 10-year voyage in the Android development realm. Here, you'll find my portfolio showcasing a selection of projects that I'm particularly proud of, a blog where I share tips, tutorials, and industry insights, and a space where I document my continuous exploration of new technologies and methodologies.</p> 
-		
-		<p>Whether you're here to explore potential collaborations, to learn from my experiences, or simply out of curiosity, I invite you to browse through my work and reflections. Let’s connect and explore the possibilities that the ever-evolving world of Android development has to offer.	</p> 
-		
-		<p>Have a look at some of the <a href="{{ site.baseurl }}projects.html">apps</a> I have worked on.</p>
+		<p>My expertise spans from mastering the fundamentals of Android development to harnessing the power of the latest frameworks and tools like Kotlin, Jetpack, and Firebase. I have a penchant for crafting applications that not only excel in functionality but also provide captivating user experiences. This journey has not only been about developing apps but also about continuously learning, adapting, and contributing to the community.</p>
 
-		<p>For more details, check out my <a href="{{ site.baseurl }}cv.html">CV</a> here.</p>
-	  </h3>
+		<p>Through this website, I aim to share insights from my 10-year voyage in the Android development realm. Here, you'll find my portfolio showcasing a selection of projects that I'm particularly proud of, a blog where I share tips, tutorials, and industry insights, and a space where I document my continuous exploration of new technologies and methodologies.</p>
+
+		<p>Whether you're here to explore potential collaborations, to learn from my experiences, or simply out of curiosity, I invite you to browse through my work and reflections. Let’s connect and explore the possibilities that the ever-evolving world of Android development has to offer.</p>
+
+		<p>Have a look at some of the <a href="{{ '/projects.html' | relative_url }}">apps</a> I have worked on.</p>
+
+		<p>For more details, check out my <a href="{{ '/cv.html' | relative_url }}">CV</a> here.</p>
+	  </div>
 	</div>
 </section>

@@ -3,9 +3,15 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{% for page in site.html_pages %}{% unless page.hide_in_nav or page.url == '/404.html' %}
+	  <url>
+		<loc>{{ site.url }}{{ site.baseurl }}{% if page.url == '/' %}/{% elsif page.url contains '.html' %}{{ page.url }}{% else %}{{ page.url }}.html{% endif %}</loc>
+	  </url>
+	{% endunless %}{% endfor %}
 	{% for post in site.posts %}
 	  <url>
 		<loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+		<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 	  </url>
 	{% endfor %}
 </urlset>

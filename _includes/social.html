@@ -1,16 +1,16 @@
 <div class="social">
 	<h2>
     {% if site.email %}
-        <a href="mailto:{{ site.email}}"><i class="fa fa-envelope"></i></a>
-    {% endif %}   
+      <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fa fa-envelope"></i></a>
+    {% endif %}
     {% if site.github %}
-	  <a href="https://github.com/{{ site.github }}"><i class="fa fa-github"></i></a>
+      <a href="https://github.com/{{ site.github }}" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
     {% endif %}
     {% if site.linkedin %}
-	  <a href="https://linkedin.com/in/{{ site.linkedin }}"><i class="fa fa-linkedin"></i></a>
+      <a href="https://linkedin.com/in/{{ site.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
     {% endif %}
     {% if site.youtube %}
-	  <a href="https://www.youtube.com/@FirozAnsari"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.youtube.com/@{{ site.youtube }}" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube"></i></a>
     {% endif %}
 	</h2>
 </div>
