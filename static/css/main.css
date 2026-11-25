@@ -160,6 +160,53 @@ body {
   line-height: 30px;
   font-size: 18px;
 }
+.projects-section-heading {
+  text-align: center !important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects-grid::before,
+.projects-grid::after {
+  display: none;
+}
+.project-card {
+  margin-bottom: 28px;
+  text-align: center;
+}
+.project-card a {
+  display: block;
+  text-decoration: none;
+}
+.project-card a:hover .project-icon {
+  transform: translateY(-2px);
+}
+.panel-default h4.project-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.project-icon {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: transform 0.15s ease;
+}
+.project-icon-rounded {
+  border-radius: 22%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
 .blog-post{
   padding-top: 15px;
 }
