@@ -1,4 +1,4 @@
-/* Dark syntax highlighting for Rouge code blocks */
+/* Rouge syntax highlighting — Dark & Light themes */
 .highlight { background: #0d1117; color: #e6edf3; border-radius: 14px; }
 .highlight pre { margin: 0; }
 .highlight .c,
@@ -46,3 +46,49 @@
 .highlight .gd { color: #ffdcd7; background-color: rgba(248, 81, 73, 0.2); }
 .highlight .gi { color: #aff5b4; background-color: rgba(46, 160, 67, 0.2); }
 .highlight .lineno { -webkit-user-select: none; user-select: none; color: #6e7681; }
+
+/* Light theme syntax colors */
+[data-theme="light"] .highlight { background: #f6f8fa; color: #1f2328; }
+[data-theme="light"] .highlight .c,
+[data-theme="light"] .highlight .cm,
+[data-theme="light"] .highlight .c1,
+[data-theme="light"] .highlight .cs { color: #6e7781; }
+[data-theme="light"] .highlight .cp,
+[data-theme="light"] .highlight .k,
+[data-theme="light"] .highlight .kc,
+[data-theme="light"] .highlight .kd,
+[data-theme="light"] .highlight .kp,
+[data-theme="light"] .highlight .kr,
+[data-theme="light"] .highlight .ow { color: #cf222e; }
+[data-theme="light"] .highlight .o,
+[data-theme="light"] .highlight .m,
+[data-theme="light"] .highlight .mf,
+[data-theme="light"] .highlight .mh,
+[data-theme="light"] .highlight .mi,
+[data-theme="light"] .highlight .mo,
+[data-theme="light"] .highlight .il,
+[data-theme="light"] .highlight .na,
+[data-theme="light"] .highlight .nb,
+[data-theme="light"] .highlight .no,
+[data-theme="light"] .highlight .nv,
+[data-theme="light"] .highlight .bp { color: #0550ae; }
+[data-theme="light"] .highlight .kt,
+[data-theme="light"] .highlight .nc,
+[data-theme="light"] .highlight .nn { color: #953800; }
+[data-theme="light"] .highlight .s,
+[data-theme="light"] .highlight .sb,
+[data-theme="light"] .highlight .sc,
+[data-theme="light"] .highlight .sd,
+[data-theme="light"] .highlight .s2,
+[data-theme="light"] .highlight .se,
+[data-theme="light"] .highlight .sh,
+[data-theme="light"] .highlight .si,
+[data-theme="light"] .highlight .sx,
+[data-theme="light"] .highlight .sr,
+[data-theme="light"] .highlight .s1,
+[data-theme="light"] .highlight .ss { color: #0a3069; }
+[data-theme="light"] .highlight .nf,
+[data-theme="light"] .highlight .ne { color: #8250df; }
+[data-theme="light"] .highlight .nt { color: #116329; }
+[data-theme="light"] .highlight .gd { color: #82071e; background-color: #ffebe9; }
+[data-theme="light"] .highlight .gi { color: #116329; background-color: #dafbe1; }

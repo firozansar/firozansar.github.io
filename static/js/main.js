@@ -1,6 +1,49 @@
 (function () {
   'use strict';
 
+  // 0. Light / Dark theme toggle (respects system preference + remembers choice)
+  const themeToggle = document.getElementById('themeToggle');
+  const themeColorMeta = document.getElementById('themeColorMeta');
+
+  const applyTheme = (theme, persist) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#070b14');
+    }
+    if (themeToggle) {
+      const nextLabel = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+      themeToggle.setAttribute('aria-label', nextLabel);
+      themeToggle.setAttribute('title', nextLabel);
+    }
+    if (persist) {
+      try { localStorage.setItem('theme', theme); } catch (e) {}
+    }
+  };
+
+  const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  applyTheme(initialTheme, false);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      applyTheme(current === 'light' ? 'dark' : 'light', true);
+    });
+  }
+
+  if (window.matchMedia) {
+    const colorSchemeMq = window.matchMedia('(prefers-color-scheme: light)');
+    const onSchemeChange = (e) => {
+      let saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (err) {}
+      if (saved !== 'light' && saved !== 'dark') {
+        applyTheme(e.matches ? 'light' : 'dark', false);
+      }
+    };
+    if (typeof colorSchemeMq.addEventListener === 'function') {
+      colorSchemeMq.addEventListener('change', onSchemeChange);
+    }
+  }
+
   // 1. Scroll-reveal via IntersectionObserver (with fast-scroll safeguard)
   const revealEls = Array.from(document.querySelectorAll('.reveal'));
   if ('IntersectionObserver' in window && revealEls.length) {
