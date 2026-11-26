@@ -2,47 +2,46 @@
 layout: layout
 ---
 
-<div class="container">
-	<div class="blog-post">
-		<h3>
-		  <strong><a href="{{ page.url | relative_url }}">{{ page.title }}</a></strong>
-		</h3>
-	</div>
-	<div class="blog-title">
-		<h4>
-		{{ page.date | date: "%B %e, %Y" }}
-			&nbsp;&nbsp;
-			{% for tag in page.tags %}
-			 <span class="label label-success">{{ tag }}</span>
-			{% endfor %}
-		</h4>
-	</div>
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<div class="blogpost">
-			  {{ content }}
-			  {% if site.related_posts.size > 0 %}
-			   <hr>
-			   <div class="related-posts">
-				   <h5>Related Posts</h5>
-				   {% for post in site.related_posts limit:3 %}
-						<div class="row">
-							 <div class="col-sm-4 col-md-4 col-lg-4">
-								 <h6 style="text-align: right">
-								 	{{ post.date | date: "%B %e, %Y" }}
-								 </h6>
-							 </div>
-							 <div class="col-sm-8 col-md-8 col-lg-8">
-								 <h6 style="text-align: left">
-								 	<strong><a href="{{ post.url | relative_url }}">{{ post.title }}</a></strong>
-								 </h6>
-							 </div>
-						</div>
-					{% endfor %}
-			   </div>
-			  {% endif %}
-			</div>
-		</div>
-	</div>
-	{% include disqus.html %}
-</div>
+<article class="post-shell">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="back-link reveal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      <span>Back to Home</span>
+    </a>
+
+    <header class="post-header reveal">
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
+        {% if page.tags.size > 0 %}
+          <span class="meta-dot" aria-hidden="true">•</span>
+          <div class="tag-list">
+            {% for tag in page.tags %}
+              <span class="tag-pill">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    <div class="post-body glass-card reveal">
+      {{ content }}
+    </div>
+
+    {% if site.related_posts.size > 0 %}
+      <section class="related-section reveal">
+        <h2 class="related-heading">Related Posts</h2>
+        <div class="related-list">
+          {% for post in site.related_posts limit:3 %}
+            <a class="related-item glass-card" href="{{ post.url | relative_url }}">
+              <span class="related-date">{{ post.date | date: "%B %e, %Y" }}</span>
+              <span class="related-title">{{ post.title }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% include disqus.html %}
+  </div>
+</article>

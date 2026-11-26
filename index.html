@@ -1,25 +1,388 @@
 ---
-layout: home
+layout: layout
 ---
 
-<section id="about">
-	<div class="container">
-	  <div class="avatar">
-		<img class="img-circle" src="{{ '/static/img/' | append: site.avatar | relative_url }}" alt="{{ site.author }}">
-	  </div>
-	  {% include social.html %}
-	  <div class="about-bio">
-		<p>Welcome to my digital domain! I'm <strong>{{ site.author }}</strong>, a seasoned Android developer with a decade of journeying through the ever-evolving landscape of mobile application development. Over the years, I've transformed initial concepts into dynamic, user-friendly applications that have reached millions of users worldwide. My adventure began in the early days of Android, navigating through its initial complexities, and has evolved alongside its exponential growth and the introduction of cutting-edge technologies.</p>
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="container hero-inner">
+    <div class="avatar-ring hero-anim" style="--delay: 0ms;">
+      <img class="avatar-img" src="{{ '/static/img/' | append: site.avatar | relative_url }}" alt="{{ site.author }}" width="160" height="160">
+    </div>
 
-		<p>My expertise spans from mastering the fundamentals of Android development to harnessing the power of the latest frameworks and tools like Kotlin, Jetpack, and Firebase. I have a penchant for crafting applications that not only excel in functionality but also provide captivating user experiences. This journey has not only been about developing apps but also about continuously learning, adapting, and contributing to the community.</p>
+    <div class="hero-badge hero-anim" style="--delay: 90ms;">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Senior Android Developer &middot; 10+ Years</span>
+    </div>
 
-		<p>Through this website, I aim to share insights from my 10-year voyage in the Android development realm. Here, you'll find my portfolio showcasing a selection of projects that I'm particularly proud of, a blog where I share tips, tutorials, and industry insights, and a space where I document my continuous exploration of new technologies and methodologies.</p>
+    <h1 class="hero-title hero-anim" style="--delay: 170ms;">{{ site.author }}</h1>
 
-		<p>Whether you're here to explore potential collaborations, to learn from my experiences, or simply out of curiosity, I invite you to browse through my work and reflections. Let’s connect and explore the possibilities that the ever-evolving world of Android development has to offer.</p>
+    <p class="hero-subtitle hero-anim" style="--delay: 250ms;">
+      Transforming ideas into dynamic, user-friendly Android applications that reach millions of users worldwide.
+    </p>
 
-		<p>Have a look at some of the <a href="{{ '/projects.html' | relative_url }}">apps</a> I have worked on.</p>
+    <div class="hero-social hero-anim" style="--delay: 330ms;">
+      {% include social.html %}
+    </div>
 
-		<p>For more details, check out my <a href="{{ '/cv.html' | relative_url }}">CV</a> here.</p>
-	  </div>
-	</div>
+    <a href="#about" class="scroll-cue hero-anim" style="--delay: 460ms;" aria-label="Scroll to explore">
+      <span>Scroll to explore</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </div>
 </section>
+
+<!-- ABOUT / STORY -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">01 / About</span>
+      <h2 class="section-title">A Decade in Android</h2>
+    </div>
+
+    <div class="about-card glass-card reveal" data-spotlight>
+      <p class="about-lead">
+        Welcome to my digital domain! I'm <strong>{{ site.author }}</strong>, a seasoned Android developer with a decade of journeying through the ever-evolving landscape of mobile application development. Over the years, I've transformed initial concepts into dynamic, user-friendly applications that have reached millions of users worldwide.
+      </p>
+
+      <div class="skill-chips" aria-label="Core skills">
+        <span class="skill-chip">Android</span>
+        <span class="skill-chip">Kotlin</span>
+        <span class="skill-chip">Jetpack</span>
+        <span class="skill-chip">Firebase</span>
+        <span class="skill-chip">SDK &amp; Libraries</span>
+        <span class="skill-chip">CI/CD</span>
+      </div>
+
+      <div class="expandable" id="aboutMore" aria-hidden="true">
+        <div class="expandable-inner about-extra">
+          <p>My adventure began in the early days of Android, navigating through its initial complexities, and has evolved alongside its exponential growth and the introduction of cutting-edge technologies.</p>
+          <p>My expertise spans from mastering the fundamentals of Android development to harnessing the power of the latest frameworks and tools like Kotlin, Jetpack, and Firebase. I have a penchant for crafting applications that not only excel in functionality but also provide captivating user experiences. This journey has not only been about developing apps but also about continuously learning, adapting, and contributing to the community.</p>
+          <p>Through this website, I share insights from my 10-year voyage in the Android development realm—from published apps I'm particularly proud of, to technical notes, career highlights, and travel vlogs. Whether you're here to explore potential collaborations, learn from my experiences, or simply out of curiosity, feel free to explore and connect.</p>
+        </div>
+      </div>
+
+      <button type="button" class="text-toggle" data-expand-target="aboutMore" aria-expanded="false" aria-controls="aboutMore">
+        <span class="toggle-label-closed">Read full story</span>
+        <span class="toggle-label-open">Show less</span>
+        <svg class="toggle-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLISHED APPS -->
+<section id="apps" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">02 / Published Apps</span>
+      <h2 class="section-title">Android Apps on Google Play</h2>
+      <p class="section-desc">Apps built and shipped with my contribution—featuring the NetSupport Ltd suite and major UK consumer apps.</p>
+    </div>
+
+    <div class="filter-bar reveal" role="tablist" aria-label="Filter apps by publisher">
+      <button type="button" class="filter-pill is-active" role="tab" aria-selected="true" data-app-filter="all">All <span class="pill-count">10</span></button>
+      <button type="button" class="filter-pill" role="tab" aria-selected="false" data-app-filter="netsupport">NetSupport Ltd <span class="pill-count">7</span></button>
+      <button type="button" class="filter-pill" role="tab" aria-selected="false" data-app-filter="other">Other Apps <span class="pill-count">3</span></button>
+    </div>
+
+    <!-- NetSupport Ltd Group (always displayed first / above other apps) -->
+    <div class="app-group" data-app-group="netsupport">
+      <div class="app-group-header reveal">
+        <h3 class="app-group-title">NetSupport Ltd</h3>
+        <a class="group-ext-link" href="https://play.google.com/store/apps/developer?id=NetSupport+Ltd&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <span>Developer Page</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="apps-grid">
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 0;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.android.cic&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/classroom-cloud-student.png' | relative_url }}" alt="classroom.cloud Student" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">classroom.cloud Student</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 1;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.manager.client&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/netsupport-manager-client.png' | relative_url }}" alt="NetSupport Manager Client" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">NetSupport Manager Client</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 2;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.manager&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/netsupport-manager-control.png' | relative_url }}" alt="NetSupport Manager Control" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">NetSupport Manager Control</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 3;" href="https://play.google.com/store/apps/details?id=com.netsupport.android.dna&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/netsupport-dna-browser.png' | relative_url }}" alt="NetSupport DNA Browser" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">NetSupport DNA Browser</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 4;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.school.tutor&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/netsupport-school-tutor.png' | relative_url }}" alt="NetSupport School Tutor" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">NetSupport School Tutor</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 5;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.school.student&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/netsupport-school-student.png' | relative_url }}" alt="NetSupport School Student" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">NetSupport School Student</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 6;" href="https://play.google.com/store/apps/details?id=com.netsupportsoftware.c247agent&hl=en_GB" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/netsupport/247connect-agent.png' | relative_url }}" alt="247connect Agent" class="app-icon app-icon-rounded" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">247connect Agent</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Other Published Apps (below NetSupport Ltd) -->
+    <div class="app-group" data-app-group="other">
+      <div class="app-group-header reveal">
+        <h3 class="app-group-title">Other Published Apps</h3>
+      </div>
+
+      <div class="apps-grid apps-grid-3">
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 0;" href="https://play.google.com/store/apps/details?id=com.ctm.cinema&hl=en&gl=UK" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/CTM.png' | relative_url }}" alt="Meerkat App" class="app-icon" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">Meerkat App</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 1;" href="https://play.google.com/store/apps/details?id=com.stagecoach.stagecoachbus&hl=en_GB&gl=UK" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/SC.png' | relative_url }}" alt="Stagecoach Bus App" class="app-icon" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">Stagecoach Bus App</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+
+        <a class="app-card glass-card reveal" data-spotlight style="--stagger: 2;" href="https://play.google.com/store/apps/details?id=uk.co.topcashback.topcashback&hl=en_GB&gl=UK" target="_blank" rel="noopener noreferrer">
+          <div class="app-icon-wrap">
+            <img src="{{ '/static/img/TCB.png' | relative_url }}" alt="TopCashback App" class="app-icon" loading="lazy" width="92" height="92">
+          </div>
+          <span class="app-name">TopCashback App</span>
+          <span class="app-cta">Google Play &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE & EDUCATION -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">03 / Experience &amp; Education</span>
+      <h2 class="section-title">Career Highlights</h2>
+      <p class="section-desc">Select any milestone below to reveal full details.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-item reveal" style="--stagger: 0;">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-card glass-card" data-spotlight>
+          <button type="button" class="timeline-trigger" data-expand-target="exp-ctm" aria-expanded="false" aria-controls="exp-ctm">
+            <div class="timeline-head">
+              <div>
+                <span class="timeline-type">Experience</span>
+                <h3 class="timeline-role">Sr Software Engineer</h3>
+                <p class="timeline-org">comparethemarket.com</p>
+              </div>
+              <span class="timeline-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+            <p class="timeline-summary">Led design and development of Kotlin Android platform libraries, User-Session auth SDK, CI/CD automation, and Meerkat app integrations.</p>
+          </button>
+          <div class="expandable" id="exp-ctm" aria-hidden="true">
+            <div class="expandable-inner timeline-details">
+              <p>Although I started as a mid-senior Software Engineer, I got promoted to Senior Software Engineer. Leading the work of designing and developing Android libraries written in Kotlin in the platform team—such as the User-Session library module encapsulating identification, authorization, and authentication for CTM app users—I also helped the Android Experience team integrate those libraries into the Meerkat Android app. Other notable work includes improving and automating CI/CD workflows, increasing test automation coverage, writing and publishing documentation using Dokka, code reviews, agile ceremonies, and cross-functional collaboration with engineers, designers, product managers, and SDETs.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item reveal" style="--stagger: 1;">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-card glass-card" data-spotlight>
+          <button type="button" class="timeline-trigger" data-expand-target="exp-stagecoach" aria-expanded="false" aria-controls="exp-stagecoach">
+            <div class="timeline-head">
+              <div>
+                <span class="timeline-type">Experience</span>
+                <h3 class="timeline-role">Android Tech Lead</h3>
+                <p class="timeline-org">Stagecoach Group</p>
+              </div>
+              <span class="timeline-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+            <p class="timeline-summary">Led Android team for 1M+ download UK Bus app—built real-time live bus map, COVID-19 "busy bus" indicator, and Google Pay integration.</p>
+          </button>
+          <div class="expandable" id="exp-stagecoach" aria-hidden="true">
+            <div class="expandable-inner timeline-details">
+              <p>As Android Tech Lead, I managed and mentored a team of developers while working hands-on. Apart from maintaining and adding functionalities to existing Stagecoach apps (Stagecoach UK Bus app, Oxford Tube app, etc.), I contributed to the vision and long-term technical strategy. The UK Bus app reached over a million downloads and ranked 13th in the Google Play UK Maps &amp; Navigation category (Oct 2020). Notable contributions include implementing a live map displaying real-time bus movement, building the "busy bus" feature during COVID-19 for social distancing, and integrating Google Pay at the Google London office where I also gave a technical presentation on it.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item reveal" style="--stagger: 2;">
+        <div class="timeline-dot timeline-dot-edu" aria-hidden="true"></div>
+        <div class="timeline-card glass-card" data-spotlight>
+          <button type="button" class="timeline-trigger" data-expand-target="edu-mmu" aria-expanded="false" aria-controls="edu-mmu">
+            <div class="timeline-head">
+              <div>
+                <span class="timeline-type timeline-type-edu">Education &middot; 2012 – 2013</span>
+                <h3 class="timeline-role">MSc Computing (Distinction)</h3>
+                <p class="timeline-org">Manchester Metropolitan University &middot; Manchester, UK</p>
+              </div>
+              <span class="timeline-chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+            <p class="timeline-summary">Graduated with Distinction across enterprise software engineering, OOP, and advanced databases.</p>
+          </button>
+          <div class="expandable" id="edu-mmu" aria-hidden="true">
+            <div class="expandable-inner timeline-details">
+              <p>Course modules included MSc Project, Enterprise Programming, Advanced Database System, Information System Management and Strategy, Object Oriented Programming, and Multimedia and Internet Application.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING & TRAVEL VLOGS -->
+<section id="stories" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">04 / Writing &amp; Vlogs</span>
+      <h2 class="section-title">Notes &amp; Travel Films</h2>
+    </div>
+
+    <div class="stories-tabs reveal" role="tablist" aria-label="Stories view">
+      <button type="button" class="filter-pill is-active" role="tab" aria-selected="true" data-story-tab="all">All</button>
+      <button type="button" class="filter-pill" role="tab" aria-selected="false" data-story-tab="blog">Technical Blog</button>
+      <button type="button" class="filter-pill" role="tab" aria-selected="false" data-story-tab="vlogs">Travel Vlog <span class="pill-count">4</span></button>
+    </div>
+
+    <!-- Technical Blog -->
+    <div class="story-group" data-story-group="blog">
+      <h3 class="app-group-title reveal">Technical Blog</h3>
+      <div class="post-cards">
+        {% for post in site.posts %}
+          <a class="blog-card glass-card reveal" data-spotlight href="{{ post.url | relative_url }}">
+            <div class="blog-card-top">
+              <time class="blog-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %e, %Y" }}</time>
+              <div class="tag-list">
+                {% for tag in post.tags %}
+                  <span class="tag-pill">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            <h4 class="blog-card-title">{{ post.title }}</h4>
+            <p class="blog-card-excerpt">{{ post.content | strip_html | normalize_whitespace | truncatewords: 28 }}</p>
+            <span class="blog-read-more">
+              <span>Read article</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Travel Vlog -->
+    <div class="story-group" data-story-group="vlogs">
+      <h3 class="app-group-title reveal">Travel Vlog</h3>
+      <div class="vlog-grid">
+        <button type="button" class="vlog-card glass-card reveal" style="--stagger: 0;" data-video-id="w_pi9zSG8Dw" data-video-title="Iceland Trip 2021" aria-label="Play Iceland Trip 2021 video">
+          <div class="vlog-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/w_pi9zSG8Dw/hqdefault.jpg" alt="Iceland Trip 2021" class="vlog-thumb" loading="lazy">
+            <span class="vlog-play" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            </span>
+          </div>
+          <div class="vlog-meta">
+            <span class="vlog-year">2021</span>
+            <h4 class="vlog-title">Iceland Trip</h4>
+          </div>
+        </button>
+
+        <button type="button" class="vlog-card glass-card reveal" style="--stagger: 1;" data-video-id="QJkEZgz-UFg" data-video-title="Paris Trip 2022" aria-label="Play Paris Trip 2022 video">
+          <div class="vlog-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/QJkEZgz-UFg/hqdefault.jpg" alt="Paris Trip 2022" class="vlog-thumb" loading="lazy">
+            <span class="vlog-play" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            </span>
+          </div>
+          <div class="vlog-meta">
+            <span class="vlog-year">2022</span>
+            <h4 class="vlog-title">Paris Trip</h4>
+          </div>
+        </button>
+
+        <button type="button" class="vlog-card glass-card reveal" style="--stagger: 2;" data-video-id="6ZlTcil93qM" data-video-title="Belgium Trip 2022" aria-label="Play Belgium Trip 2022 video">
+          <div class="vlog-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/6ZlTcil93qM/hqdefault.jpg" alt="Belgium Trip 2022" class="vlog-thumb" loading="lazy">
+            <span class="vlog-play" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            </span>
+          </div>
+          <div class="vlog-meta">
+            <span class="vlog-year">2022</span>
+            <h4 class="vlog-title">Belgium Trip</h4>
+          </div>
+        </button>
+
+        <button type="button" class="vlog-card glass-card reveal" style="--stagger: 3;" data-video-id="JHjfOHr11cM" data-video-title="Oslo Trip 2022" aria-label="Play Oslo Trip 2022 video">
+          <div class="vlog-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/JHjfOHr11cM/hqdefault.jpg" alt="Oslo Trip 2022" class="vlog-thumb" loading="lazy">
+            <span class="vlog-play" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            </span>
+          </div>
+          <div class="vlog-meta">
+            <span class="vlog-year">2022</span>
+            <h4 class="vlog-title">Oslo Trip</h4>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO LIGHTBOX MODAL -->
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+  <div class="video-modal-backdrop" data-close-modal></div>
+  <div class="video-modal-dialog">
+    <div class="video-modal-header">
+      <h3 class="video-modal-title" id="videoModalTitle">Video</h3>
+      <button type="button" class="video-modal-close" data-close-modal aria-label="Close video">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="video-modal-frame" id="videoModalFrame"></div>
+  </div>
+</div>
